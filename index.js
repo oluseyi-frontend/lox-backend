@@ -19,6 +19,10 @@ app.use('/api/auth/register', registerRoute);
 app.use("/api/auth/login", loginRoute);
 
 
+app.get('/', () => {
+   res.send("welcome to lox services API");
+})
+
 app.use((req, res, next) => {
   const error = new Error(`not found = ${req.originalUrl}`);
   res.status(404);
