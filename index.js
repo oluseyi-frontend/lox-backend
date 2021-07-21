@@ -19,7 +19,7 @@ app.use('/api/auth/register', registerRoute);
 app.use("/api/auth/login", loginRoute);
 
 
-app.get('/', () => {
+app.get('/', (req, res) => {
    res.send("welcome to lox services API");
 })
 
